@@ -23,7 +23,7 @@ spec:
         env:
         - name: INFERENCE_SERVER_URL
           value: http://inference-server:8080
-        image: osbuild.lmf.openshift.es:5000/gitea/object-detection-stream-manager:v1
+        image: osbuild.lmf.openshift.es:5000/gitea/object-detection-stream-manager:v1-arm
         name: object-detection-stream-manager
         ports:
         - containerPort: 5000
