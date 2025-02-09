@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: confidentelion-pod
-  name: confidentelion-pod-deployment
+    app: object-detection
+  name: object-detection-inference-server-deployment
   namespace: object-detection
 spec:
   selector:
     matchLabels:
-      app: confidentelion-pod
+      app: object-detection-inference-server
   template:
     metadata:
       labels:
-        app: confidentelion-pod
-      name: confidentelion-pod
+        app: object-detection-inference-server
+      name: object-detection-inference-server
     spec:
       serviceAccount: object-sa
       containers:
@@ -23,7 +23,7 @@ spec:
         - name: TERM
           value: xterm
         image: osbuild.lmf.openshift.es:5000/gitea/object-inference-server:v1-arm
-        name: confidentelion
+        name: object-detection-inference-server
         ports:
         - containerPort: 8080
         securityContext:
