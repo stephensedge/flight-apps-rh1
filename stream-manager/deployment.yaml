@@ -26,6 +26,7 @@ spec:
         name: object-detection-stream-manager
         ports:
         - containerPort: 5000
+        serviceAccount: object-sa
         securityContext:
           privileged: true
           procMount: Unmasked

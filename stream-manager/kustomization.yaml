@@ -1,4 +1,7 @@
 resources:
   - namespace.yaml
+  - sa.yaml
+  - clusterrole.yaml
+  - crb.yaml
   - deployment.yaml
   - service.yaml
