@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: confidentelion-pod
+  name: confidentelion-pod-deployment
+  namespace: object-detection
+spec:
+  selector:
+    matchLabels:
+      app: confidentelion-pod
+  template:
+    metadata:
+      labels:
+        app: confidentelion-pod
+      name: confidentelion-pod
+    spec:
+      serviceAccount: object-sa
+      containers:
+      - args:
+        - /opt/app-root/src/entrypoint.sh
+        env:
+        - name: TERM
+          value: xterm
+        image: osbuild.lmf.openshift.es:5000/gitea/object-inference-server:v1-arm
+        name: confidentelion
+        ports:
+        - containerPort: 8080
+        securityContext:
+          runAsNonRoot: true
+          seLinuxOptions:
+            type: spc_t
+        stdin: true
+        tty: true
+
