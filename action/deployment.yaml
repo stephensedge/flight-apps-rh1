@@ -4,6 +4,7 @@ metadata:
   labels:
     app: object-detection
   name: object-detection-action-deployment
+  namespace: object-detection
 spec:
   selector:
     matchLabels:

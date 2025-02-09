@@ -4,6 +4,7 @@ metadata:
   labels:
     app: object-detection
   name: object-detection-inference-server-service
+  namespace: object-detection
 spec:
   ports:
   - name: "8080"
