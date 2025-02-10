@@ -24,9 +24,9 @@ spec:
         - name: TERM
           value: xterm
         - name: ALIVE_ENDPOINT
-          value: http://object-detection-dashboard-backend-dashboard.apps.cluster-xmsj9.dynamic.redhatworkshops.io/alive
+          value: http://object-detection-dashboard-backend-user99-ai-test.apps.cluster-z844b.z844b.sandbox182.opentlc.com/alive
         - name: ALERT_ENDPOINT
-          value: http://object-detection-dashboard-backend-dashboard.apps.cluster-xmsj9.dynamic.redhatworkshops.io/alert
+          value: http://object-detection-dashboard-backend-user99-ai-test.apps.cluster-z844b.z844b.sandbox182.opentlc.com/alert
         image: 192.168.2.100:5000/gitea/object-detection-action:v1-arm
         name: object-detection-action
         securityContext:
